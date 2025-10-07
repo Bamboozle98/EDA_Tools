@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from pandas.plotting import scatter_matrix
 
 # Load the dataset
-df = pd.read_csv('../Data/food/foodstruct_nutritional_facts_modified.csv')
+df = pd.read_csv('../Data/ACME-HappinessSurvey2020.csv')
 
 # Select continuous columns
 continuous_columns = df.select_dtypes(include=['float64', 'int64'])

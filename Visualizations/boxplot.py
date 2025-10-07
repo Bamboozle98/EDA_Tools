@@ -1,24 +1,45 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
+from matplotlib.ticker import MaxNLocator
+
 
 # Load the dataset (replace with the path to your dataset)
-df = pd.read_csv('../Data/food/foodstruct_nutritional_facts_modified.csv')
+df = pd.read_csv('../Data/ACME-HappinessSurvey2020.csv')
 
-# Strip any extra spaces in column names (just in case)
-df.columns = df.columns.str.strip()
+# Dictionary of Column Names and their meanings
+col_def = {
+    'Y': "Customer Happiness (0 or 1)",
+    'X1': "Satisfaction with Delivery Time (1-5)",
+    'X2': "Satisfaction with Contents of Delivery (1-5)",
+    'X3': "Satisfaction with All Items Ordered (1-5)",
+    'X4': "Satisfaction with Price of Order (1-5)",
+    'X5': "Satisfaction with Order Courier",
+    'X6': "Satisfaction with Ease of Ordering on App (1-5)"
+}
+
+# Select numeric columns
+numeric_columns = df.select_dtypes(include=['number']).columns
 
 # Print column names to verify the correct name
 print(df.columns)
 
-# Correct column name based on your dataset (e.g., 'Food Category')
-categories_of_interest = ['Meat', 'Vegetables', 'Grains']
-filtered_df = df[df['Category Name'].isin(categories_of_interest)]  # Update column name here
+output_folder = 'ChartsGraphs/Boxplots'
+os.makedirs(output_folder, exist_ok=True)
 
-# Plot boxplot for a continuous feature (e.g., 'calories')
-plt.figure(figsize=(10, 6))
-sns.boxplot(data=filtered_df, x='Category Name', y='Calories', palette='Set2')  # Update column name
-plt.title('Boxplot of Calories for Selected Categories')
-plt.ylabel('Calories')
-plt.xlabel('Food Category')
-plt.show()
+
+for column in numeric_columns[1:]:
+    sns.boxplot(x='Y', y=column, data=df)
+    title = str(col_def[column] + ' by Happiness')
+    plt.title(title)
+    plt.xlabel('Customer Happiness (0 = Unhappy, 1 = Happy)')
+    plt.ylabel(col_def[column])
+
+    ax = plt.gca()
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))  # makes tick labels integers
+    ax.yaxis.set_major_locator(MaxNLocator(nbins=5))      # max 10 y-ticks
+
+    save_path = os.path.join(output_folder, f'{col_def[column]}_histogram.png')
+    plt.savefig(save_path, bbox_inches='tight')  # trims extra whitespace
+    plt.close()

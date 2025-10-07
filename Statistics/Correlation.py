@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset (replace with your actual path)
-df = pd.read_csv('../Data/food/foodstruct_nutritional_facts_modified.csv')
+df = pd.read_csv('../Data/ACME-HappinessSurvey2020.csv')
 
 # Strip any extra spaces in column names (just in case)
 df.columns = df.columns.str.strip()
