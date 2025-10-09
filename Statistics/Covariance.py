@@ -1,28 +1,12 @@
 import pandas as pd
 
-# Load the dataset (replace with your actual path)
+# Load the dataset
 df = pd.read_csv('../Data/ACME-HappinessSurvey2020.csv')
 
-# Strip any extra spaces in column names (just in case)
-df.columns = df.columns.str.strip()
+# Compute variance for each numerical column
+variances = df[['X1','X2','X3','X4','X5','X6']].var()
+print(variances)
 
-# List of continuous features (replace these with actual continuous columns in your dataset)
-continuous_features = ['Calcium', 'Calories', 'Carbs', 'Cholesterol', 'Copper', 'Fats', 'Fiber', 'Iron', 'Magnesium', 'Protein']  # Example continuous features
-
-# Filter the dataframe to include only continuous columns
-continuous_df = df[continuous_features]
-
-# Compute the covariance matrix
-covariance_matrix = continuous_df.cov()
-
-# Set pandas display options to show all rows and columns
-pd.set_option('display.max_rows', None)  # Show all rows
-pd.set_option('display.max_columns', None)  # Show all columns
-
-# Print the covariance matrix
-print("Covariance Matrix:")
-print(covariance_matrix)
-
-# Reset display options to defaults (optional)
-pd.reset_option('display.max_rows')
-pd.reset_option('display.max_columns')
+# Create a Covariance Matrix for all non-target features.
+cov_matrix = df[['X1','X2','X3','X4','X5','X6']].cov()
+print(cov_matrix)

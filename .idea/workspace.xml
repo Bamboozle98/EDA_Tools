@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5218f865-c810-4c3f-9755-94b32f322d9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Statistics/Chi-Squared.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Statistics/Overview.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualizations/CorrelationHeatMap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualizations/Pairplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ApzivaProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ApzivaProject1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5218f865-c810-4c3f-9755-94b32f322d9f" name="Changes" comment="First Major commit for EDA of ACME Delivery Happiness Metrics.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics/CategoricalData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics/CategoricalData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics/ContinuosData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics/ContinuosData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics/Correlation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics/Correlation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Statistics/Covariance.py" beforeDir="false" afterPath="$PROJECT_DIR$/Statistics/Covariance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualizations/Barplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizations/Barplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualizations/Binning.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizations/Binning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualizations/Histogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizations/Histogram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualizations/Scatterplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizations/Scatterplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualizations/boxplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizations/boxplot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +59,7 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.Chi-Squared">
+  <component name="RunManager" selected="Python.Covariance">
     <configuration name="Chi-Squared" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApzivaProject1" />
       <option name="ENV_FILES" value="" />
@@ -119,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Overview" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Covariance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApzivaProject1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Statistics/Overview.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Statistics/Covariance.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Covariance" />
         <item itemvalue="Python.Chi-Squared" />
         <item itemvalue="Python.Pairplot" />
         <item itemvalue="Python.CorrelationHeatMap" />
         <item itemvalue="Python.boxplot" />
-        <item itemvalue="Python.Overview" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +196,28 @@
       <option name="presentableId" value="Default" />
       <updated>1759602755808</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Major commit for EDA of ACME Delivery Happiness Metrics.">
+      <option name="closed" value="true" />
+      <created>1759873198184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759873198184</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Major commit for EDA of ACME Delivery Happiness Metrics.">
+      <option name="closed" value="true" />
+      <created>1759873226146</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759873226146</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Major commit for EDA of ACME Delivery Happiness Metrics." />
+    <option name="LAST_COMMIT_MESSAGE" value="First Major commit for EDA of ACME Delivery Happiness Metrics." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
